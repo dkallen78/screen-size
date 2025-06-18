@@ -6,30 +6,11 @@
     <title>
       Title
     </title>
-    <!--
-      <script defer src="script.js">
+      <script defer src="screen-size.js">
       </script>
-    -->
-    <!--
-      <link rel="stylesheet" href="stylesheet.css">
-      <link rel="stylesheet" href="stylesheet.css" media="print">
-    -->
+      <link rel="stylesheet" href="screen-size.css">
     <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #inOut {
-        display: grid;
-        grid-template-columns: auto auto;
-      }
-
-      #button, #output {
-        grid-column: 1 / 3;
-        text-align: center;
-      }
+      
     </style>
 
     <meta name="description" content="description">
@@ -47,31 +28,7 @@
     </div>
     <div id="sizeBox"></div>
     <script>
-      const output = document.getElementById("output");
-      const sizeBox = document.getElementById("sizeBox");
-
-      const button = document.getElementById("button");
-
-      button.addEventListener("click", (event) => {
-        const diagonal = parseFloat(document.getElementById("diagonal").value);
-        const height = parseFloat(document.getElementById("height").value);
-        const width = parseFloat(document.getElementById("width").value);
-
-        const ratio = width / height;
-        const heightInch = Math.sqrt(diagonal**2 / ((ratio**2) + 1));
-        const widthInch = heightInch * ratio;
-
-        output.innerHTML = `${heightInch.toPrecision(4)} by ${widthInch.toPrecision(4)}`;
-
-        sizeBox.style.width = `${widthInch}in`;
-        sizeBox.style.height = `${heightInch}in`;
-        sizeBox.style.border = "1px solid black";
-
-        const pythag1 = "a² + b² = c²";
-        const aspectRatio = "w / h";
-
-
-      });
+      
     </script>  
   </body>
 </html>

@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inOut {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#inOut > * {
+  margin: .1rem;
+}
+
+#button, #output {
+  grid-column: 1 / 3;
+  text-align: center;
+}
