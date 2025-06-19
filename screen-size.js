@@ -23,16 +23,13 @@ button.addEventListener("click", (event) => {
   const heightInch = Math.sqrt(diagonal**2 / ((ratio**2) + 1));
   const widthInch = heightInch * ratio;
 
-  output.innerHTML = `${heightInch.toPrecision(4)} by ${widthInch.toPrecision(4)}`;
+  output.innerHTML = `${heightInch.toPrecision(3)} by ${widthInch.toPrecision(3)} inches<br>
+                      ${Math.round(heightInch * 25.4).toPrecision(3)} by ${Math.round(widthInch * 25.4).toPrecision(3)} mm`;
   //Determines the ratio of device pixels per inch to 96 ppi
   const scale = window.devicePixelRatio;
   //resizes the sizeBox div to be the approximate size  of the screen
   sizeBox.style.width = `${widthInch * scale}in`;
   sizeBox.style.height = `${heightInch * scale}in`;
   sizeBox.style.border = "1px solid black";
-
-  //const pythag1 = "a² + b² = c²";
-  //const aspectRatio = "w / h";
-
 
 });
